@@ -4,50 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Resource Recruitment</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to right, #ff0000, #990000);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-        }
-
-        .main-heading {
-            font-size: 8rem;
-            margin: 0;
-            /* font-weight: normal; */
-            font-weight: 800;
-        }
-
-        .sub-heading {
-            font-size: 2rem;
-            margin: 20px 0;
-            font-weight: 200;
-        }
-
-        .coming-soon {
-            font-size: 1.5rem;
-            margin-top: 40px;
-        }
-
-        .company-name {
-            font-style: italic;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1 class="main-heading">Hold on.</h1>
-    <h2 class="sub-heading">You're on the right place.</h2>
-    <p class="coming-soon">
-        <span class="company-name">Red Resource Recruitment</span> is COMING SOON..
-    </p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-full">Red Resource Recruitment</span>
+            <span class="logo-short">RRR</span>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/services.html">Services</a>
+            <a href="pages/process.html">Process</a>
+            <a href="#connect">Contact us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>
+                    Unlock Global<br>
+                    Talent <span class="highlight">with Local</span><br>
+                    <span class="highlight">Support</span>
+                </h1>
+                <p class="subtitle">Access talented, flexible, and affordable Indian professionals backed by expert local support for your business projects.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#connect">
+                        <button class="cta-btn primary">Get Started</button>
+                    </a>
+                    <a href="./pages/services.html">
+                        <button class="cta-btn secondary">Learn More</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <button class="service-btn">Virtual Assistance</button>
+                <button class="service-btn">Procurement</button>
+                <button class="service-btn">Administration</button>
+                <button class="service-btn">Accounting</button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="arrow">↓</span>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>WHY CHOOSE US?</h2>
+        <p class="subtitle">The perfect blend of global talent and local expertise</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/icons/cost-icon.svg" alt="Cost-Efficient">
+                </div>
+                <h3>Cost-Efficient</h3>
+                <p>Significant cost savings without compromising on quality through our remote work model.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/icons/support-icon.svg" alt="Local Support">
+                </div>
+                <h3>Local Support</h3>
+                <p>Expert local teams ensure smooth communication and project management.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/icons/quality-icon.svg" alt="Quality Assured">
+                </div>
+                <h3>Quality Assured</h3>
+                <p>Rigorous selection process and continuous training ensure top performance.</p>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <h4>24/7</h4>
+                <p>Support available</p>
+            </div>
+            <div class="stat">
+                <h4>50%</h4>
+                <p>Cost reduction</p>
+            </div>
+            <div class="stat">
+                <h4>100+</h4>
+                <p>Skilled Professionals</p>
+            </div>
+            <div class="stat">
+                <h4>5★</h4>
+                <p>Client satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="mission">
+        <h2>OUR MISSION</h2>
+        <div class="mission-content">
+            <div class="mission-image">
+                <img src="assets/images/vision.webp" alt="Our Mission">
+            </div>
+            <p>At RedResourceRecruitment, we specialize in bridging the gap between the global market and talented Indian professionals. Our mission is to provide businesses with an affordable, skilled, and reliable workforce tailored to their needs. With expertise in Virtual Assistance, Procurement, Administration, and Accounting services, we empower organizations to streamline operations and achieve excellence. Trust us to connect you with professionals who bring efficiency, dedication, and expertise to your business.</p>
+        </div>
+    </section>
+
+    <!-- Connect with Us Section -->
+    <section class="connect"
+    id="connect"
+    >
+        <h1>CONNECT WITH US!</h1>
+        
+        <div class="contact-container">
+            <div class="contact-card">
+                <h2>CONTACT INFORMATION</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon phone">📞</span>
+                        <span>+91 877 014 0535</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon email">✉️</span>
+                        <span>sara@redresourcerecruitment.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon location">📍</span>
+                        <div class="address">
+                            Delhi, India<br>
+                            [ 201301 ]
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>BUSINESS HOURS</h2>
+                <div class="business-hours">
+                    <div class="hours-item">
+                        <span class="day">Monday - Saturday :</span>
+                        <span class="time">8:00 AM - 5:00 PM GMT</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Sunday :</span>
+                        <span class="time">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="company-info">
+                <h3>Red Resource Recruitments</h3>
+                <p class="slogan"><i>"Your success, our priority"</i></p>
+            </div>
+            <div class="quick-links">
+                <h4>QUICK LINKS</h4>
+                <a href="index.html">Home</a>
+                <a href="pages/services.html">Services</a>
+                <a href="pages/process.html">Process</a>
+                <a href="#connect">Contact us</a>
+            </div>
+            <div class="social-links">
+                <h4>SOCIALS</h4>
+                <a href="https://www.linkedin.com/company/redresourcerecruitment/">LinkedIn</a>
+                <a href="https://www.youtube.com/watch?si=4DNhhQnIH67MlMJT&v=hxgHcf034xM&feature=youtu.be">YouTube</a>
+                <a href="https://www.instagram.com/redresourcerecruitment?igsh=YXZiYWt2bDQzcXpx">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
-</html>
+</html> 
