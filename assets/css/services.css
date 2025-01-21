@@ -1,0 +1,576 @@
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: clamp(1rem, 5vw, 2rem) 5%;
+    margin-top: clamp(60px, 10vh, 80px);
+    background-color: var(--black);
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero .subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: min(800px, 90%);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: var(--white);
+    line-height: 1.5;
+}
+
+/* Carousel */
+.carousel {
+    width: 100%;
+    max-width: min(1200px, 95%);
+    position: relative;
+    margin: clamp(1rem, 3vw, 2rem) 0;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    perspective: 1000px;
+    overflow-x: hidden;
+    padding: 2rem 0;
+}
+
+.carousel-slide {
+    width: clamp(200px, 30vw, 300px);
+    height: clamp(150px, 20vw, 200px);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-slide.active {
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: clamp(30px, 5vw, 40px);
+    height: clamp(30px, 5vw, 40px);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.carousel-btn.prev { left: clamp(5px, 2vw, 20px); }
+.carousel-btn.next { right: clamp(5px, 2vw, 20px); }
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    margin-top: clamp(1rem, 3vw, 2rem);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-btn {
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border-radius: 30px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: none;
+}
+
+.cta-btn.primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.cta-btn.secondary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+.cta-btn.primary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.cta-btn.secondary:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+    .carousel-container {
+        gap: 0.5rem;
+    }
+
+    .carousel-slide {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .carousel-slide.active {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        padding: 2rem 10%;
+    }
+
+    .carousel-container {
+        gap: 2rem;
+    }
+
+    .carousel-slide {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 8rem 5% 5rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black);
+}
+
+.benefits h1 {
+    color: var(--primary-color);
+    font-size: 4rem;
+    /* margin-bottom: 6rem; */
+    font-weight: 600;
+    /* margin-top: 30px; */
+    text-shadow: 2px 2px 4px rgba(241, 226, 226, 0.3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.benefits-diagram {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.benefits-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15rem;
+    position: relative;
+    z-index: 2;
+    margin: 3rem 0;
+}
+
+.benefits-connector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 200px);
+    height: 2px;
+    background: var(--white);
+    z-index: 1;
+}
+
+.benefits-connector::before,
+.benefits-connector::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 150px;
+    background: var(--white);
+    transform: translateY(-50%);
+}
+
+.benefits-connector::before {
+    left: 0;
+    height: 200px;
+    transform: translateY(-25%);
+}
+
+.benefits-connector::after {
+    right: 0;
+    height: 200px;
+    transform: translateY(-75%);
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 25px;
+    flex: 1;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.benefit-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Position adjustments for the diagram */
+.benefits-row.top {
+    margin-bottom: 8rem;
+}
+
+.benefits-row.bottom {
+    margin-top: 8rem;
+}
+
+/* Expertise Section */
+.expertise {
+    padding: 0rem 5% 5rem;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.expertise h1 {
+    color: var(--primary-color);
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.expertise-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.expertise-card {
+    background: var(--primary-color);
+    padding: 2rem 3rem;
+    border-radius: 25px;
+    text-align: left;
+    position: relative;
+}
+
+.expertise-card h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.expertise-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-card li {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.expertise-card li:last-child {
+    margin-bottom: 0;
+}
+
+.expertise-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .benefits-row {
+        gap: 8rem;
+    }
+
+    .benefit-card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .benefits-row {
+        gap: 4rem;
+    }
+
+    .benefits h1 {
+        font-size: 3.5rem;
+    }
+
+    .expertise h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits h1 {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .benefits-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .benefits-connector {
+        display: none;
+    }
+
+    .benefit-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .benefits-row.top {
+        margin-bottom: 2rem;
+    }
+
+    .benefits-row.bottom {
+        margin-top: 2rem;
+    }
+
+    .expertise {
+        padding: 5rem 5%;
+    }
+
+    .expertise h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .expertise-card {
+        padding: 2rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits h1 {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card {
+        padding: 2rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .expertise h1 {
+        font-size: 2.5rem;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    .expertise-card li {
+        font-size: 1rem;
+    }
+}
+
+/* Connect Section */
+.connect {
+    padding: 5rem 5%;
+    background-color: var(--black);
+}
+
+.connect h1 {
+    color: var(--primary-color);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1.5rem, 3vw, 2rem);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: var(--white);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+    color: var(--black);
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    padding-bottom: clamp(0.8rem, 1.5vw, 1rem);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--black);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.business-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.hours-item .day {
+    font-weight: 500;
+}
+
+.hours-item .time {
+    color: var(--black);
+}
+
+.address {
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .connect h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .connect h1 {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .hours-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+} 
